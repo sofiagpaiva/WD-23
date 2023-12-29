@@ -376,7 +376,7 @@ nav li {
 
   /* width */
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 0px;
   }
   
   /* Track */
@@ -393,13 +393,5 @@ nav li {
   ::-webkit-scrollbar-thumb:hover {
     background:rgb(224, 231, 159);
   }
-
-  .sidebar-menu.active + body,
-.sidebar-menu.active + body * {
-  overflow: hidden;
-}
-
- 
-
 
 }
