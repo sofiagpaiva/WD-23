@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLONE • sobre</title>
+    <link rel="icon" type="favicon" href="../LandingPage/assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style_about.css" />
+</head>
+<body>
+   
+   <header id="cabeçalho">
+      <nav>
+         <img 
+         src="../NAV/Nav 2.gif" 
+         alt="ícone nav ciclone"
+         class="icone">
+      
+         <div class="sidebar-menu"> 
+             <img 
+             src="../NAV/cruz_amarela.png" 
+             alt="close nav ciclone"
+             class="close_icone">
+      
+             <a href="../index.html">
+      
+             <img 
+             src="../NAV/Nav 2.gif" 
+             alt="ícone nav ciclone"
+             class="landing_icone">
+             </a>
+      
+             <ul>
+                 <li><a href="../Anabela/index.html">Anabela</a></li>
+                 <li class="bernardo"> 
+                     Bernardo
+                     <ul class="submenu">
+                         <li class="submenu1"><a class="sub" href="../FAQ/index.html">FAQ</a></li>
+                         <li class="submenu2"><a class="sub"  href="../PageUnderConstruction/index.html">Page Under Construction</a></li>
+                     </ul>
+                 </li>
+                 <li><a href="../M/index.html">M.</a></li>
+                 <li><a href="../Sobre/about.html">Sobre</a></li>
+             </ul>
+         </div>
+      </nav>
+  </header>
+ 
+
+ <div class="title">
+    <h1>DESCOBRE MAIS...</h1>
+    <img src="assets/images/seta créditos.png" alt="">
+ </div>
+
+ <div class="pouquinho">
+    <h2><a href="#cabeçalho">é só mais um pouquinho!</a></h2>
+ </div>
+ 
+ <div class="lá">
+    <h2><a href="#cabeçalho">estás quase lá!</a></h2>
+ </div>
+ 
+ <div class="quase">
+     <h2><a href="#cabeçalho">quaseeeeeeee</a></h2>
+ </div>
+
+ <div class="foot">
+    <a href="about_v2.html">
+    <h2 class="sentence">
+        clica <span>aqui</span> para os créditos
+    </h2>
+    </a>
+    <img src="assets/images/rabisco_azul.png">
+ </div>   
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const menuIcon = document.querySelector('.icone');
+  const closeIcon = document.querySelector('.close_icone');
+  const sidebarMenu = document.querySelector('.sidebar-menu');
+  
+  // Toggle sidebar menu when clicking the menu icon
+  menuIcon.addEventListener('click', function() {
+     sidebarMenu.classList.toggle('active');
+  });
+  
+  // Close sidebar menu when clicking the close icon
+  closeIcon.addEventListener('click', function() {
+     sidebarMenu.classList.remove('active');
+  }); 
+  });
+  </script>
+    
+</body>
+
+
+
+</html>

@@ -1,0 +1,358 @@
+  /* FONT-FACE ________________________________________ */
+  @font-face {
+    font-family: KabelBold;
+    src: url(../../../fonts/NeueKabel-Bold.otf);
+  }
+  
+  @font-face {
+    font-family: KabelMed;
+    src: url(../../../fonts/NeueKabel-Medium.otf);
+  }
+  
+  @font-face {
+    font-family: KabelBook;
+    src: url(../../../fonts/NeueKabel.otf);
+  }
+  
+  @font-face {
+    font-family: KabelLight;
+    src: url(../../../fonts/NeueKabel-Light.otf);
+  }
+  
+  
+  @font-face {
+    font-family: KabelExtraLight;
+    src: url(../../../fonts/NeueKabel-ExtraLight.otf);
+  }
+
+*{
+    margin: 0%;
+  }
+
+  header {
+    display: block;
+    position: relative;
+    font-family: 'KabelBold', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 10vw;
+    text-align: center;
+    margin: 30px;
+  }
+
+
+/* NAV AKA SIDE MENU ________________________________________ */
+.icone {
+  display: block;
+  position: fixed;
+  float: left;
+  min-width: 60px;
+  max-width: 80px;
+  height: auto;
+  z-index: 10;
+  top: 50px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.landing_icone {
+  display: block;
+  position: fixed;
+  float: left;
+  min-width: 60px;
+  max-width: 80px;
+  height: auto;
+  z-index: 10;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+
+}
+
+.close_icone {
+  display: block;
+  position: fixed;
+  float: left;
+  min-width: 20px;
+  max-width: 75px;
+  height: auto;
+  z-index: 10;
+  top: 60px;
+  right:90px;
+  cursor: pointer;
+}
+
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #2a2e87;
+  padding-top: 12rem;
+  padding-left: 3.5rem;
+  transition: transform 0.3s ease, left 0.3s ease; 
+  transform: translateX(-100%);
+  left:0 ;
+  text-align: left;
+ 
+}
+
+.sidebar-menu.active {
+  transform: translateX(0); 
+  left: 0;
+}
+
+
+  /*MENU */
+
+nav li {
+list-style: none;
+  line-height: 7vw;
+  color:#dc5330;
+  text-decoration: none;
+  font-size: 6vw ;
+  font-family: 'KabelBook', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+nav a {
+  color:#dc5330;
+  text-decoration: none;
+  font-family: 'KabelBook', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.submenu1,
+.submenu2 {
+  display: none;
+  font-family: 'KabelLight', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.bernardo:hover
+.submenu1{
+  display: block;
+}
+.bernardo:hover
+.submenu2{
+  display: block;
+}
+
+.sub {
+  font-family: 'KabelLight', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav a:hover {
+  font-family: 'KabelBold', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+nav:hover ul {
+  display: block;
+}
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e3e0c6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc5330;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #293a76;
+}
+
+
+.anabela{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+body{
+   /*background-color: rgb(42, 46, 135);   /*COR AZUL*/
+   background-image: url(../images/fundo\ textura\ 1.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   -webkit-touch-callout: none; 
+   -webkit-user-select: none;
+   -khtml-user-select: none; 
+   -moz-user-select: none; 
+   -ms-user-select: none; 
+   user-select: none; 
+}
+
+article{
+  display: block;
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+h2{
+  font-size: 3em;
+  font-family: 'KabelBold', 'Arial Narrow', Arial, sans-serif;
+  color: #e0e79f;
+}
+
+h3{
+  font-family: 'KabelBold', 'Arial Narrow', Arial, sans-serif;
+  color: #e0e79f;
+}
+
+
+#data{
+  font-family: 'KabelMed', 'Arial Narrow', Arial, sans-serif;
+}
+
+ .texto{
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.4em;
+  font-family: 'KabelBook', 'Arial Narrow', Arial, sans-serif;
+  color: #e0e79f;
+  line-height: 1.2em;
+}
+
+.blackbox{
+display: inline-block;
+ background-color: #dc5330 ;
+ color: #dc5330 ; 
+ padding: 2px 5px;
+ margin-bottom: 10px;
+ }
+
+
+s{
+  text-decoration: wavy line-through;
+  text-decoration-color:#dc5330;
+  text-decoration-thickness: 5px;
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 600px) {
+
+  body{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
+  }
+ 
+  article {
+      width: 70%;
+      padding-top: 80px;
+      padding-bottom: 50px;
+      margin: 0 0 0 90px;
+      overflow-x: hidden;
+  
+  }
+
+  h2 {
+      font-size: 2em;
+  }
+
+  h3 {
+      font-size: 1.2em;
+  }
+
+  .texto {
+    display: block;
+      font-size: 1.1em;
+      max-width: 100%;
+      line-height: 1.2em;
+  }
+
+  .blackbox{
+    display: inline-block;
+     background-color: #dc5330 ;
+     color: #dc5330 ; 
+     padding: 2px 5px;
+     margin-bottom: 10px;
+     }
+     
+ ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+
+    /* NAV */
+
+    .icone {
+      display: block;
+      position: fixed;
+      float: left;
+      min-width: 20px;
+      max-width: 50px;
+      height: auto;
+      z-index: 10;
+      top: 40px;
+      left: 30px;
+      cursor: pointer;
+    }
+    
+    .landing_icone {
+      display: block;
+      position: fixed;
+      float: left;
+      width: 10%;
+      min-width: 20px;
+      max-width: 50px;
+      height: auto;
+      z-index: 10;
+      top: 40px;
+      left: 30px;
+      cursor: pointer;
+    
+    }
+    
+    .close_icone {
+      display: block;
+      position: fixed;
+      float: left;
+      width: 10%;
+      min-width: 20px;
+      max-width: 50px;
+      height: auto;
+      z-index: 10;
+      top: 50px;
+      right:40px;
+      cursor: pointer;
+    }
+
+    .sidebar-menu {
+      position: fixed;
+      top: 0;
+      width: 96%;
+      height: 100vh;
+      z-index: 1000;
+      background-color: #2a2e87;
+      padding-top: 9rem;
+      padding-left: 1.5rem;
+      transition: transform 0.3s ease, left 0.3s ease; 
+      transform: translateX(-100%);
+      left:0 ;
+      text-align: left;
+    }
+
+    nav li {
+      list-style: none;
+        line-height: 12vw;
+        color:#dc5330;
+        text-decoration: none;
+        font-size: 10vw ;
+        font-family: 'KabelBook', 'Arial Narrow', Arial, sans-serif;
+      }
+}

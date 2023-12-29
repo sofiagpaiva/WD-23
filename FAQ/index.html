@@ -1,0 +1,78 @@
+<html lang="eng" class="indexmobile">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <title>CICLONE • FAQ</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <link rel="icon" type="favicon" href="../LandingPage/assets/images/favicon.png">
+    </head>
+    <body>
+    <header>
+        <nav>
+            <img 
+            src="../NAV/Nav 2.gif" 
+            alt="ícone nav ciclone"
+            class="icone">
+         
+            <div class="sidebar-menu"> 
+                <img 
+                src="../NAV/cruz_azul.png" 
+                alt="close nav ciclone"
+                class="close_icone">
+         
+                <a href="../index.html">
+         
+                <img 
+                src="../NAV/Nav 2.gif" 
+                alt="ícone nav ciclone"
+                class="landing_icone">
+                </a>
+         
+                <ul>
+                    <li><a href="../Anabela/index.html">Anabela</a></li>
+                    <li class="bernardo"> 
+                        Bernardo
+                        <ul class="submenu">
+                            <li class="submenu1"><a class="sub" href="../FAQ/index.html">FAQ</a></li>
+                            <li class="submenu2"><a class="sub"  href="../PageUnderConstruction/index.html">Page Under Construction</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../M/index.html">M.</a></li>
+                    <li><a href="../Sobre/about.html">Sobre</a></li>
+                </ul>
+            </div>
+         </nav>
+    </header>
+        <main>
+        </main>
+
+        <div class="base">
+            <img src="images/faq.base.png" class="imagem-base" alt="FAQ BROWSER">
+            <a href="../index.html">
+                <img src="images/seta.esquerda.png" class="seta-esquerda" alt="FAQ BROWSER">
+            </a>
+            <a href="FAQ1.html">
+                <img src="images/seta_direita.png" class="seta-direita" alt="FAQ BROWSER">
+            </a>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+          const menuIcon = document.querySelector('.icone');
+          const closeIcon = document.querySelector('.close_icone');
+          const sidebarMenu = document.querySelector('.sidebar-menu');
+          
+          // Toggle sidebar menu when clicking the menu icon
+          menuIcon.addEventListener('click', function() {
+             sidebarMenu.classList.toggle('active');
+          });
+          
+          // Close sidebar menu when clicking the close icon
+          closeIcon.addEventListener('click', function() {
+             sidebarMenu.classList.remove('active');
+          }); 
+          });
+          </script>
+
+    </body>
+</html>

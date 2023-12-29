@@ -1,0 +1,903 @@
+* {
+    margin: 0px;
+    padding: 0;
+  }
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    display: block;
+    background-color: #2a2e87;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.FAQ1 {
+    height: 3250px;
+    width: 100%;
+    margin: 0px;
+    display: block;
+    background-color: #2a2e87;
+    overflow-x: hidden;
+}
+
+.FAQ2 {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  display: block;
+  background-color: #2a2e87;
+  overflow-x: hidden;
+}
+
+
+  header {
+    display: block;
+    position: relative;
+    font-family: 'KabelBold', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 10vw;
+    text-align: center;
+    margin: 30px;
+  }
+
+/* NAV AKA SIDE MENU ________________________________________ */
+.icone {
+  display: block;
+  position: fixed;
+  float: left;
+  min-width: 60px;
+  max-width: 80px;
+  height: auto;
+  z-index: 10;
+  top: 50px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.landing_icone {
+  display: block;
+  position: fixed;
+  float: left;
+  min-width: 60px;
+  max-width: 80px;
+  height: auto;
+  z-index: 10;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+
+}
+
+.close_icone {
+  display: block;
+  position: fixed;
+  float: left;
+  min-width: 20px;
+  max-width: 75px;
+  height: auto;
+  z-index: 10;
+  top: 60px;
+  right:90px;
+  cursor: pointer;
+}
+
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #e0e79f;
+  padding-top: 12rem;
+  padding-left: 3.5rem;
+  transition: transform 0.3s ease, left 0.3s ease; 
+  transform: translateX(-100%);
+  left:0 ;
+  text-align: left;
+ 
+}
+
+.sidebar-menu.active {
+  transform: translateX(0); 
+  left: 0;
+}
+
+
+  /*MENU */
+
+nav li {
+list-style: none;
+  line-height: 7vw;
+  color:#293a76;
+  text-decoration: none;
+  font-size: 6vw ;
+  font-family: 'KabelBook', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+nav a {
+  color:#293a76;
+  text-decoration: none;
+  font-family: 'KabelBook', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.submenu1,
+.submenu2 {
+  display: none;
+  font-family: 'KabelLight', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.bernardo:hover
+.submenu1{
+  display: block;
+}
+.bernardo:hover
+.submenu2{
+  display: block;
+}
+
+.sub {
+  font-family: 'KabelLight', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav a:hover {
+  font-family: 'KabelBold', 'Arial Narrow', Arial, sans-serif;
+  color: #293a76;
+}
+
+
+nav:hover ul {
+  display: block;
+}
+
+
+
+
+
+
+@font-face {
+  font-family: "Neue Kabel Extra Bold";
+  src: url(../../../fonts/NeueKabel-ExtraBold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "KabelBold";
+  src: url(../../../fonts/NeueKabel-Bold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "KabelMed";
+  src: url(../../../fonts/NeueKabel-Medium.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "KabelBook";
+  src: url(../../../fonts/NeueKabel.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "KabelLight";
+  src: url(../../../fonts/NeueKabel-Light.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "KabelExtraLight";
+  src: url(../../../fonts/NeueKabel-ExtraLight.otf) format("truetype");
+}
+
+h1 {
+    font-family: Neue Kabel Extra Bold, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    color:#e3e0c6;
+}
+
+h2 {
+  font-family: KabelBold, 'Arial Narrow Bold', sans-serif;
+  font-size: 35px;
+  color:#e3e0c6;
+}
+
+p {
+  font-family: KabelBook, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  color:#e3e0c6;
+}
+
+a {
+  color: #e3e0c6;
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #e0e79f;
+}
+
+.imagem-base {
+    display: block;
+    margin: 20px auto 0px;
+    width: 60%;
+}
+
+.seta-esquerda{
+    display: block;
+    position: absolute;
+    float: left;
+    width: 150px;
+    margin-left: 80px;
+    top: 40%;
+}
+
+.seta-direita{
+    display: block;
+    position: absolute;
+    width: 150px;
+    margin-left:85%;
+    top: 40%;
+}
+
+.topo{
+  position:relative;
+  display: block;
+  left: 41%;
+  margin: 40px;
+}
+
+.left {
+  position: relative;
+  display: block;
+  left: 10%;
+  margin: 80px;
+}
+
+.right {
+  position: relative;
+  display: block;
+  left:53%;
+  margin:80px;
+}
+
+.seta-esquerda-faq1{
+    display: block;
+    position: relative;
+    float: left;
+    width: 120px;
+    margin: 0 50 0 0;
+    margin-left: 43%;
+}
+
+.seta-direita-faq1 {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  margin: 0 0 0 50;
+}
+
+#tab1{
+    display: block;
+    position:absolute;
+    z-index: 10;
+    cursor: move;
+    object-fit: cover;
+    top: 160px;
+    left: 5%;
+}
+
+#tab2{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 160px;
+  left: 55%;
+}
+
+#tab3{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 250px;
+  left: 30%;
+}
+
+#tab4{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 380px;
+  left: 12%;
+}
+
+#tab5{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 500px;
+  left: 27%;
+}
+
+#tab6{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 480px;
+  left: 55%;
+}
+
+#tab7{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 600px;
+  left: 5%;
+}
+
+#tab8{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 700px;
+  left: 43%;
+}
+
+#tab9{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 880px;
+  left: 20%;
+}
+
+#tab10{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 930px;
+  left: 52%;
+}
+
+#tab11{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1000px;
+  left: 5%;
+}
+
+#tab12{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1100px;
+  left: 35%;
+}
+
+#tab13{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1270px;
+  left: 51%;
+}
+
+#tab14{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1320px;
+  left: 10%;
+}
+
+#tab15{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1410px;
+  left: 32%;
+}
+
+#tab16{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1600px;
+  left: 8%;
+}
+
+#tab17{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1700px;
+  left: 44%;
+}
+
+#tab18{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1800px;
+  left: 50%;
+}
+
+#tab19{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 1900px;
+  left: 12%;
+}
+
+#tab20{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 2000px;
+  left: 40%;
+}
+
+#tab21{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 2200px;
+  left: 7%;
+}
+
+#tab22{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 2300px;
+  left: 50%;
+}
+
+#tab23{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 2450px;
+  left: 12%;
+}
+
+#tab24{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 2550px;
+  left: 18%;
+}
+
+#tab25{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 2670px;
+  left: 50%;
+}
+
+#tab26{
+  display: block;
+  position:absolute;
+  z-index: 10;
+  cursor: move;
+  object-fit: cover;
+  top: 2700px;
+  left: 20%;
+}
+
+.scroll-text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.blococentro {
+  position:relative;
+  display:block;
+  margin: 50px;
+  text-align: center;
+}
+
+.AAHH {
+  position: absolute;
+  color: #e3e0c6;
+  animation: runText 3.8s linear infinite;
+  font-size: 500px;
+  line-height: 350px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes runText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-70%);
+  }
+}
+
+.grito {
+  visibility: hidden;
+  position: absolute;
+  margin: 30px;
+  left: 40%;
+  top: 39%;
+  font-size: 70px;
+  line-height: 1.2;
+}
+
+p:hover .AAHH {
+  opacity: 0;
+}
+
+p:hover .grito {
+  visibility: visible;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.FAQ1 {
+  height: 2130px;
+  width: 100%;
+  margin: 0px;
+  display: block;
+  background-color: #2a2e87;
+  overflow-x: hidden;
+}
+
+
+h1 {
+  font-family: Neue Kabel Extra Bold, 'Arial Narrow Bold', sans-serif;
+  font-size: 2em;
+  color:#e3e0c6;
+}
+
+h2 {
+  font-family: KabelBold, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.2em;
+  color:#e3e0c6;
+}
+
+p {
+  font-family: KabelBook, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.1em;
+  color:#e3e0c6;
+}
+
+.seta-esquerda{
+  width: 20px;
+  margin-left: 20%;
+}
+
+.seta-direita {
+  margin-left: 50%;
+}
+
+.seta-esquerda-faq1{
+  width: 80px;
+  margin: 0 25 0 0;
+  margin-left: 30%;
+ }
+
+.seta-direita-faq1 {
+width: 80px;
+margin: 0 0 0 25;
+}
+
+.topo{
+  left: 38%;
+}
+
+.left{
+  left: 10%;
+  margin: 60px;
+}
+
+.right{
+  left:10%;
+  margin: 60px;
+}
+
+#tab1 {
+  width:300px;
+  top: 100px;
+  left: 5%;
+}
+
+#tab2{
+  width: 300px;
+  top: 130px;
+  left: 45%;
+}
+
+#tab3{
+  width:300px;
+  top: 170px;
+  left: 10%;
+}
+
+#tab4{
+  width: 300px;
+  top: 200px;
+  left: 36%;
+}
+
+#tab5{
+  width:300px;
+  top: 300px;
+  left: 5%;
+}
+
+#tab6{
+  width: 300px;
+  top: 360px;
+  left: 45%;
+}
+
+#tab7{
+  width:300px;
+  top: 450px;
+  left: 18%;
+}
+
+#tab8{
+  width:300px;
+  top: 520px;
+  left: 8%;
+}
+
+#tab9{
+  width:300px;
+  top: 600px;
+  left: 35%;
+}
+
+#tab10{
+  width:300px;
+  top: 700px;
+  left: 12%;
+}
+
+#tab11{
+  width:300px;
+  top: 780px;
+  left: 34%;
+}
+
+#tab12{
+  width:300px;
+  top: 820px;
+  left: 10%;
+}
+
+#tab13{
+  width:300px;
+  top: 890px;
+  left: 45%;
+}
+
+#tab14{
+  width:300px;
+  top: 980px;
+  left: 6%;
+}
+
+#tab15{
+  width:300px;
+  top: 990px;
+  left: 40%;
+}
+
+#tab16{
+  width:300px;
+  top: 1050px;
+  left: 16%;
+}
+
+#tab17{
+  width:300px;
+  top: 1200px;
+  left: 10%;
+}
+
+#tab18{
+  width:300px;
+  top: 1300px;
+  left: 30%;
+}
+
+#tab19{
+  width:300px;
+  top: 1350px;
+  left: 5%;
+}
+
+#tab20{
+  width:300px;
+  top: 1500px;
+  left: 40%;
+}
+
+#tab21{
+  width:300px;
+  top: 1460px;
+  left: 9%;
+}
+
+#tab22{
+  width:300px;
+  top: 1590px;
+  left: 7%;
+}
+
+#tab23{
+  width:300px;
+  top: 1670px;
+  left: 34%;
+}
+
+#tab24{
+  width:300px;
+  top: 1720px;
+  left: 10%;
+}
+
+#tab25{
+  width:300px;
+  top: 1800px;
+  left: 30%;
+}
+
+#tab26{
+  width:300px;
+  top: 1850px;
+  left: 17%;
+}
+
+.grito{
+left:25%;
+}
+
+.imagem-base{
+  width:90%;
+  margin-top: 25vh;
+}
+
+.seta-esquerda{
+  width: 100px;
+  top:70%;
+}
+
+.seta-direita{
+  width:100px;
+  top:70%;
+  left:10%;
+}
+
+/* NAV */
+
+.icone {
+  display: block;
+  position: fixed;
+  float: left;
+  min-width: 20px;
+  max-width: 50px;
+  height: auto;
+  z-index: 10;
+  top: 40px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.landing_icone {
+  display: block;
+  position: fixed;
+  float: left;
+  width: 10%;
+  min-width: 20px;
+  max-width: 50px;
+  height: auto;
+  z-index: 10;
+  top: 40px;
+  left: 30px;
+  cursor: pointer;
+
+}
+
+.close_icone {
+  display: block;
+  position: fixed;
+  float: left;
+  width: 10%;
+  min-width: 20px;
+  max-width: 50px;
+  height: auto;
+  z-index: 10;
+  top: 50px;
+  right:40px;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #e0e79f;
+  padding-top: 9rem;
+  padding-left: 1.5rem;
+  transition: transform 0.3s ease, left 0.3s ease; 
+  transform: translateX(-100%);
+  left:0 ;
+  text-align: left;
+}
+
+nav li {
+  list-style: none;
+    line-height: 12vw;
+    color:#293a76;
+    text-decoration: none;
+    font-size: 10vw ;
+    font-family: 'KabelBook', 'Arial Narrow', Arial, sans-serif;
+  }
+
+}

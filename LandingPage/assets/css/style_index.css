@@ -1,0 +1,456 @@
+  /*
+  Sofia Paiva | WD
+  CSS Landing Page
+  */
+
+  /* RESET ______________________________________*/
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: KabelBold;
+  src: url(../../../fonts/NeueKabel-Bold.otf);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  position: relative;
+  /* display: flex; */
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* MOBILE VERSION________________________________________ */
+
+div {
+  position: relative;
+  animation-play-state: paused;
+  z-index: 2;
+  }
+
+/* 'CICLONE' ________________________________________ */
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-260vh)translateX(2vw);
+  width: 95vw;
+  flex-direction: column;
+}
+
+figure a {
+  display: block; /* Ensure the link takes the full width of its container */
+}
+
+figure img {
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+}
+
+figure img:hover  {
+  content: url('../images/título_vermelho.png');
+}
+
+h2 {
+  font-family: 'KabelBold';
+  color: #2a2e87;
+  display: inline;
+  font-size: 3.5vw;
+  text-align: center;
+}
+
+/* ITEM ILUSTRADOS ________________________________________ */
+.anim_item img {
+    width: 100vw; /* Make the image fill the width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+  }
+
+
+  /* POSIÇÃO PAUSA________________________________________ */
+  div:nth-child(1) {
+    translate: 0vw -155vh;
+    animation-play-state: paused;
+  }
+  
+  div:nth-child(2) {
+    translate: 0vw -160vh;
+    animation-play-state: paused;
+  } 
+  
+  div:nth-child(3) {
+    translate: 0vw -180vh;
+    animation-play-state: paused;
+  }
+  
+  div:nth-child(4) {
+      translate: 0vw -205vh;
+    animation-play-state: paused;
+  }
+
+  /* MOVIMENTO________________________________________ */
+  section > div:nth-child(1) {
+    animation-name: moveUpDown;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0.3s;
+  }
+
+  section > div:nth-child(2) {
+    animation-name: moveUpDown;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0.2s;
+  }
+
+  section > div:nth-child(3) {
+    animation-name: moveUpDown;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0.1s;
+  }
+
+  section > div:nth-child(4) {
+    animation-name: moveUpDown;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    
+  }
+  /* ANIMAÇÃO MOV.________________________________________ */
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(-70vh);
+    }
+    100% {
+      transform: translateY(250vh);
+    }
+  }
+
+  /* HOVER (não funciona em mobile though)________________________________________ */
+  div img:hover {
+    animation: tilt 0.3s ease-in-out infinite;
+  }
+  
+  @keyframes tilt {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+  }
+
+
+
+
+/* DESKTOP VERSION________________________________________ */
+
+@media only screen and (min-width: 600px) {
+  div {
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  animation-play-state: paused;
+  /* transition: all 2s ease-in-out; */
+  transform-origin: center;
+  width: 30%; 
+  z-index: 2;
+  }
+
+.anim_item {
+  display: inline-block; /* Make the div take the width of its content */
+}
+
+.anim_item a {
+  display: block; /* Ensure the link takes the full width of its container */
+}
+
+.anim_item img {
+  width: 100%; /* Make the image fill the width of its container */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+/* 'CICLONE' + TEXTO________________________________________ */
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(25vh)translateX(20vw);
+  width: 60%;
+  z-index: 1;
+}
+
+figure a {
+  display: block; /* Ensure the link takes the full width of its container */
+}
+
+figure img {
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+}
+
+figure img:hover  {
+  content: url('../images/título_vermelho.png');
+}
+
+figure h2 {
+  font-size: 2vw;
+}
+
+/* ITEMS ILUSTRADOS + ROTAÇÃO DE CADA UM________________________________________ */
+div:nth-child(1) {
+  translate: 75vw 15vh;
+  animation-play-state: paused;
+}
+
+div:nth-child(2) {
+  translate: 35vw -20vh;
+  animation-play-state: paused;
+} 
+
+div:nth-child(3) {
+  translate: -5vw 15vh;
+  animation-play-state: paused;
+}
+
+div:nth-child(4) {
+    translate: 40vw 60vh;
+  animation-play-state: paused;
+}
+
+
+section > div:nth-child(1) {
+  animation-name: rotate_1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+/* (ANIMAÇÃO ROTATE ESPECÍFICA PARA CADA ITEM)________________________________________ */
+/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+@keyframes rotate_1 {
+
+  12% {
+    transform: translateX(-18vw) translateY(-35vh);
+  }
+  25% {
+    transform: translateX(-45vw) translateY(-50vh);
+  }
+  37% {
+    transform: translateX(-70vw) translateY(-35vh);
+  }
+  50% {
+    transform: translateX(-90vw) translateY(0vh);
+  }
+  62% {
+    transform: translateX(-70vw) translateY(35vh);
+  }
+  75% {
+    transform: translateX(-45vw) translateY(50vh);
+  }
+  87% {
+    transform: translateX(-18vw) translateY(35vh);
+  }
+  92% {
+    transform: translateX(-8vw) translateY(30vh);
+  }
+  100% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+  }
+
+section > div:nth-child(2) {
+  animation-name: rotate_2;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+@keyframes rotate_2 {
+  12% {
+    transform: translateX(-20vw) translateY(6vh);
+  }
+  25% {
+    transform: translateX(-40vw) translateY(40vh);
+  }
+  37% {
+    transform: translateX(-20vw) translateY(70vh);
+  }
+  50% {
+    transform: translateX(0vw) translateY(85vh);
+  }
+  62% {
+    transform: translateX(20vw) translateY(70vh);
+  }
+  75% {
+    transform: translateX(40vw) translateY(40vh);
+  }
+  87% {
+    transform: translateX(20vw) translateY(6vh);
+  }
+  100% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+}
+
+section > div:nth-child(3) {
+  animation-name: rotate_3;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+@keyframes rotate_3 {
+ 12% {
+    transform: translateX(10vw) translateY(30vh);
+  }
+  25% {
+    transform: translateX(40vw) translateY(45vh);
+  }
+  37% {
+    transform: translateX(70vw) translateY(30vh);
+  }
+  50% {
+    transform: translateX(80vw) translateY(10vh);
+  }
+  62% {
+    transform: translateX(70vw) translateY(-30vh);
+  }
+  75% {
+    transform: translateX(40vw) translateY(-40vh);
+  }
+  87% {
+    transform: translateX(10vw) translateY(-30vh);
+  }
+  100% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+}
+
+section > div:nth-child(4) {
+  animation-name: rotate_4;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+/* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+@keyframes rotate_4 {
+  12% {
+    transform: translateX(20vw) translateY(-15vh);
+  }
+  25% {
+    transform: translateX(35vw) translateY(-40vh);
+  }
+  37% {
+    transform: translateX(20vw) translateY(-60vh);
+  }
+  50% {
+    transform: translateX(0vw) translateY(-90vh);
+  }
+  62% {
+    transform: translateX(-35vw) translateY(-70vh);
+  }
+  75% {
+    transform: translateX(-45vw) translateY(-40vh);
+  }
+  87% {
+    transform: translateX(-20vw) translateY(-15vh);
+  }
+  100% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+}
+
+/* HOVER DOS ITEMS________________________________________ */
+div img:hover {
+  animation: tilt 0.3s ease-in-out infinite;
+}
+
+@keyframes tilt {
+  0%, 100% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(5deg);
+  }
+  50% {
+      transform: rotate(-5deg);
+  }
+  75% {
+      transform: rotate(3deg);
+  }
+}
+
+
+
+}
